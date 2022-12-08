@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.fantatextgame</groupId>
-  <artifactId>FamtaTextGame</artifactId>
+  <artifactId>FantaTextGame</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>FamtaTextGame</name>
+  <name>FantaTextGame</name>
   <url>http://maven.apache.org</url>
 
   <properties>

@@ -1,4 +1,4 @@
-package com.fantatextgame.FamtaTextGame;
+package com.fantatextgame.FantaTextGame;
 
 /**
  * Hello world!

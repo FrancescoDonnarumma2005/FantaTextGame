@@ -1,4 +1,4 @@
-package com.fantatextgame.FamtaTextGame;
+package com.fantatextgame.FantaTextGame;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
