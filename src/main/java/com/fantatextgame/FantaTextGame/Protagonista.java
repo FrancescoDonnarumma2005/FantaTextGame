@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Protagonista {
 		
-		public static boolean isRestarted=false; //attributo che potrebbe trovare la propria utilità nel main per controllare se l'utente sceglie di restartare
+		private boolean isRestarted=false; //attributo che potrebbe trovare la propria utilità nel main per controllare se l'utente sceglie di restartare
 		public static int numLivelloAttuale=0;
 		private int numLivelloTotali=5;
 		private String titolo;
@@ -38,11 +38,39 @@ public class Protagonista {
 			
 		}
 		
-		//TODO un get che ritorna a econda del livello attuale la risposta corretta corrispondente a quel livello
+		// un get che ritorna a seconda del livello attuale la risposta corretta corrispondente a quel livello
 		
-		//TODO funzione che stampa il menu (vedere blueprint progetto)
+		private int getCorrectAnswer() {
+			if (numLivelloAttuale==1) {
+				return CorrectAnswer[0];
+			}
+			
+			else {
+			return CorrectAnswer[1];
+			
+		}
+		}
+		
+		// funzione che stampa il menu (vedere blueprint progetto)
+		
+		public void Menu() {
+			System.out.println("Stai giocando a " + titolo +" livello " + (numLivelloAttuale+1) + " digitare il numero corrispondente all’azione da fare.\n"+ 
+					"1) Gioca\n" + 
+					"2) Ritirati\n" + 
+					"3) Riavvia da capo");
+			}
+
+		public boolean isRestarted() {
+			return isRestarted;
+		}
+
+		public void setRestarted(boolean isRestarted) {
+			this.isRestarted = isRestarted;
+		}
 		
 		//TODO funzione che controlla le scelte del menu fatte dal giocatore
+		
+		
 		
 
 	}
