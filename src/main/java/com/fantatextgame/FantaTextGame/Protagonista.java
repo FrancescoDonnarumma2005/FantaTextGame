@@ -7,33 +7,18 @@ public class Protagonista {
 		
 		private boolean isRestarted=false; //attributo che potrebbe trovare la propria utilità nel main per controllare se l'utente sceglie di restartare
 		public static int numLivelloAttuale=0;
-		private int numLivelloTotali=5;
 		private String titolo;
-		public String[] scenari=new String[2]; //Array di stringhe che conterranno le descrizioni con le scelte dei vari scenari per le prove sono 2 ma dovranno essere 5 alla fine
+		public String[] scenari=new String[5]; //Array di stringhe che conterranno le descrizioni con le scelte dei vari scenari 
 		private int[] CorrectAnswer=new int[2]; //array di stringhe che conterrà il numero corrispondente alla scelta corretta
 		
 		//costruttore che salva in un array di stringhe i vari scenari corrispondenti ai vari livelli
-		public Protagonista(String nameFile){
-			FileReader reader = new FileReader(nameFile);
-			Scanner scanner =new Scanner(reader);
-			
+		public Protagonista(){
 			scenari[0]="";
 			scenari[1]="";
-			//TODO inizializzare gli altri scenari
-			
-			//iterazione per poter copiare riga per riga lo scenario nella rispettiva stringa
-			for (int i=0; i<2;i++) {
-			while(scanner.hasNextLine()) {
-				String line=scanner.nextLine();
-				
-				//se la riga equivale a $ capisce che lo scenario termina non salvando più nulla nella stringa
-				if (line.equals("$")) { 
-					break;
-				}
-				scenari[i]=scenari[i]+line+"\n";
-			}
-
-		}
+			scenari[2]="";
+			scenari[3]="";
+			scenari[4]="";
+			//bisogna riempirli con i rispettivi scenari e scelte
 			this.setCorrectAnswer(); //TODO un set che da il valore corrispondente alla soluzione ai rispettivi indici dell'array dell'omonima variabile 
 			
 		}
