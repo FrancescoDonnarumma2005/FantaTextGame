@@ -19,7 +19,7 @@ public class Protagonista {
 			scenari[3]="";
 			scenari[4]="";
 			//bisogna riempirli con i rispettivi scenari e scelte
-			this.setCorrectAnswer(); //TODO un set che da il valore corrispondente alla soluzione ai rispettivi indici dell'array dell'omonima variabile 
+			//this.setCorrectAnswer(); //TODO un set che da il valore corrispondente alla soluzione ai rispettivi indici dell'array dell'omonima variabile 
 			
 		}
 		
