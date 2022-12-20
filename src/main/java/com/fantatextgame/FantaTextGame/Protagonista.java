@@ -9,7 +9,7 @@ public class Protagonista {
 		public static int numLivelloAttuale=0;
 		private String titolo;
 		public String[] scenari=new String[5]; //Array di stringhe che conterranno le descrizioni con le scelte dei vari scenari 
-		private int[] CorrectAnswer=new int[2]; //array di stringhe che conterrà il numero corrispondente alla scelta corretta
+		private int[] CorrectAnswer=new int[5]; //array di stringhe che conterrà il numero corrispondente alla scelta corretta
 		
 		//costruttore che salva in un array di stringhe i vari scenari corrispondenti ai vari livelli
 		public Protagonista(){
@@ -30,10 +30,22 @@ public class Protagonista {
 				return CorrectAnswer[0];
 			}
 			
-			else {
+			else if(numLivelloAttuale==2) {
 			return CorrectAnswer[1];
 			
 		}
+			else if(numLivelloAttuale==3) {
+				return CorrectAnswer[2];
+				
+			}
+			else if(numLivelloAttuale==4) {
+				return CorrectAnswer[3];
+				
+			}
+			else {
+				return CorrectAnswer[4];
+				
+			}
 		}
 		
 		// funzione che stampa il menu (vedere blueprint progetto)
@@ -55,7 +67,28 @@ public class Protagonista {
 		
 		//TODO funzione che controlla le scelte del menu fatte dal giocatore
 		
+		//setta il numero corrispondente alla scelta giusta
+		private void setCorrectAnswer() {
+	        CorrectAnswer[0]=1;
+	        CorrectAnswer[1]=2;
+	        CorrectAnswer[2]=1;
+	        CorrectAnswer[3]=2;
+	        CorrectAnswer[4]=2; //il numero assegnato è solo dimostrativo
+	    }
 		
+		//funzione che controlla se la scelta relativa allo scenario è corretta
+		public void isCorrectChoise(int scelta) throws Exception {
+	        if (scelta==this.getCorrectAnswer()) {
+	        System.out.println("BRAVO CE L’HAI FATTA!");
+	        }
+	        else if(scelta>4 && scelta<1) {
+	            throw new Exception();
+	        }
+	        else {
+	            System.out.println("HAI PERSO, RISPOSTA SBAGLIATA, SEI STATO ANNIENTATO!");
+	            System.exit(0);
+	        }
+	    }
 		
 
 	}
