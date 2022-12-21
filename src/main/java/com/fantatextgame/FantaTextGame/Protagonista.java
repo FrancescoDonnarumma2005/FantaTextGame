@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Protagonista {
 		
 		private boolean isRestarted=false; //attributo che potrebbe trovare la propria utilità nel main per controllare se l'utente sceglie di restartare
-		public static int numLivelloAttuale=0;
+		private int numLivelloAttuale=0;
 		private String titolo;
 		public String[] scenari=new String[5]; //Array di stringhe che conterranno le descrizioni con le scelte dei vari scenari 
 		private int[] CorrectAnswer=new int[5]; //array di stringhe che conterrà il numero corrispondente alla scelta corretta
@@ -19,7 +19,8 @@ public class Protagonista {
 			scenari[3]="";
 			scenari[4]="";
 			//bisogna riempirli con i rispettivi scenari e scelte
-			//this.setCorrectAnswer(); //TODO un set che da il valore corrispondente alla soluzione ai rispettivi indici dell'array dell'omonima variabile 
+			this.setCorrectAnswer(); 
+			this.setTitolo("La leggenda della voragine");
 			
 		}
 		
@@ -72,7 +73,7 @@ public class Protagonista {
 		// funzione che stampa il menu (vedere blueprint progetto)
 		
 		public void Menu() {
-			System.out.println("Stai giocando a " + titolo +" livello " + (numLivelloAttuale+1) + " digitare il numero corrispondente all’azione da fare.\n"+ 
+			System.out.println("Stai giocando a " + this.getTitolo() +" livello " + (this.getNumLivelloAttuale()+1) + " digitare il numero corrispondente all’azione da fare.\n"+ 
 					"1) Gioca\n" + 
 					"2) Ritirati\n" + 
 					"3) Riavvia da capo");
@@ -115,16 +116,32 @@ public class Protagonista {
 		
 		public void GameController(int scelta) throws Exception {
 	        switch (scelta) {
-	        case 1: numLivelloAttuale++; this.getScenari(); isRestarted=false; break;
+	        case 1: this.setNumLivelloAttuale(getNumLivelloAttuale()+1); this.getScenari(); isRestarted=false; break;
 	        case 2: System.out.println("HAI PERSO PERCHE’ TI SEI RITIRATO"); System.exit(0); break;
-	        case 3: numLivelloAttuale=0; isRestarted=true; break;
+	        case 3: this.setNumLivelloAttuale(0); isRestarted=true; break;
 	        default: throw new Exception(); 
 	        
 	   
 	     }
 	   }
+
+		private String getTitolo() {
+			return titolo;
+		}
+
+		private void setTitolo(String titolo) {
+			this.titolo = titolo;
+		}
+
+		public int getNumLivelloAttuale() {
+			return numLivelloAttuale;
+		}
+
+		private void setNumLivelloAttuale(int numLivelloAttuale) {
+			this.numLivelloAttuale = numLivelloAttuale;
+		}
 		
-		
+	
 
 	}
 

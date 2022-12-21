@@ -11,23 +11,21 @@ public class App
     public static void main( String[] args ) throws Exception
     {
         System.out.println( "Hello World!" );
-    
+        
         Protagonista protagonista = new Protagonista();
         Scanner scanner =new Scanner(System.in);
         int scelta=0;
 
-        while (protagonista.numLivelloAttuale<2) {
+        while (protagonista.getNumLivelloAttuale()<5) {
         protagonista.Menu();
         scelta=scanner.nextInt();
 
         protagonista.GameController(scelta);
-        //TODO FAR FUNZIONARE LA SCELTA GRAZIE
         if(protagonista.isRestarted()) {
             continue;
         }
 
         scelta=scanner.nextInt();
-       
         protagonista.isCorrectChoise(scelta);
 
     }
