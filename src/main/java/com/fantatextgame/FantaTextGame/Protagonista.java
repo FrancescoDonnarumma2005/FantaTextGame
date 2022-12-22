@@ -23,6 +23,27 @@ public class Protagonista {
 			
 		}
 		
+		//Stampa la stringa dello scenario rispettivo al livello
+	    private void getScenari() {
+	        if (numLivelloAttuale==1) {
+	             System.out.println(scenari[0]);
+	        }
+	        else if (numLivelloAttuale==2) {
+	            System.out.println(scenari[1]);
+	        }
+	        else if (numLivelloAttuale==3) {
+	            System.out.println(scenari[2]);
+	        }
+	        else if (numLivelloAttuale==4) {
+	            System.out.println(scenari[3]);
+	        }
+	        else if (numLivelloAttuale==5) {
+	            System.out.println(scenari[4]);
+	        }
+	        
+	    }
+		
+		
 		// un get che ritorna a seconda del livello attuale la risposta corretta corrispondente a quel livello
 		
 		private int getCorrectAnswer() {
@@ -89,6 +110,20 @@ public class Protagonista {
 	            System.exit(0);
 	        }
 	    }
+		
+		//Controlla le varie scelte relative al menù
+		
+		public void GameController(int scelta) throws Exception {
+	        switch (scelta) {
+	        case 1: numLivelloAttuale++; this.getScenari(); isRestarted=false; break;
+	        case 2: System.out.println("HAI PERSO PERCHE’ TI SEI RITIRATO"); System.exit(0); break;
+	        case 3: numLivelloAttuale=0; isRestarted=true; break;
+	        default: throw new Exception(); 
+	        
+	   
+	     }
+	   }
+		
 		
 
 	}
