@@ -2,36 +2,33 @@ package com.fantatextgame.FantaTextGame;
 
 import java.util.Scanner;
 
-/**
- * Hello world!
- *
- */
+
 public class App 
 {
     public static void main( String[] args ) throws Exception
     {
-        System.out.println( "Hello World!" );
+       
         
         Protagonista protagonista = new Protagonista();
         Scanner scanner =new Scanner(System.in);
-        int scelta=0;
-
-        while (protagonista.getNumLivelloAttuale()<5) {
+        String scelta="0";
+        do {
         protagonista.Menu();
-        scelta=scanner.nextInt();
-
-        protagonista.GameController(scelta);
+        do {
+        scelta=scanner.nextLine();
+        } while (!scelta.equals("1") && !scelta.equals("2") && !scelta.equals("3"));
+        protagonista.GameController(Integer.parseInt(scelta));
         if(protagonista.isRestarted()) {
             continue;
         }
+        do {
+            scelta=scanner.nextLine();
+            } while (!scelta.equals("1") && !scelta.equals("2") && !scelta.equals("3") && !scelta.equals("4"));
+        protagonista.isCorrectChoise(Integer.parseInt(scelta));
 
-        scelta=scanner.nextInt();
-        protagonista.isCorrectChoise(scelta);
-
-    }
+    }while (protagonista.getNumLivelloAttuale()<5);
         
         System.out.println("BRAVO HAI VINTO E COMPLETATO IL GIOCO!");
-        
+        scanner.close();
     	}
 	}
-
