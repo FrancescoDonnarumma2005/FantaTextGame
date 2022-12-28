@@ -21,15 +21,18 @@ public class Protagonista {
 		private String titolo;
 		private String[] scenari=new String[5]; //Array di stringhe che contiene le descrizioni con le scelte dei vari scenari 
 		private int[] CorrectAnswer=new int[5]; //array di stringhe che contiene il numero corrispondente alla scelta corretta
+		private String trama;
 		//TODO variabile che contiene la trama 
 		
+		
 		/**costruttore che lancia i metodi 
-		 *{@link Protagonista#setScenari() setScenari()}, {@link Protagonista#setCorrectAnswer() setCorrectAnswer()} e {@link Protagonista#setTitolo(String)}*/
+		 *{@link Protagonista#setScenari() setScenari()}, {@link Protagonista#setCorrectAnswer() setCorrectAnswer()}, {@link Protagonista#setTitolo() setTitolo()} e {@link Protagonista#setTrama() setTrama()}*/
 		public Protagonista(){
 			
 			this.setScenari();
 			this.setCorrectAnswer(); 
-			this.setTitolo("La leggenda della voragine");
+			this.setTitolo();
+			this.setTrama();
 			
 		}
 		/**Setta in un array di stringhe i vari scenari corrispondenti ai vari livelli */
@@ -96,9 +99,14 @@ public class Protagonista {
 			        CorrectAnswer[4]=4; 
 			    }
 				
-		/**funzione che stampa il menu */
+		/**funzione che stampa il menu e la trama se il livello è 0 o se il gioco è stato restartato 
+		 * @see Protagonista#getTrama()
+		 * @see Protagonista#getTitolo()*/
 		
 		public void Menu() {
+			if(numLivelloAttuale==0 || isRestarted) {
+				System.out.println(this.getTrama());
+			}
 			System.out.println("Stai giocando a " + this.getTitolo() +" livello " + numLivelloAttuale+1 + " digitare il numero corrispondente all’azione da fare.\n"+ 
 					"1) Gioca\n" + 
 					"2) Ritirati\n" + 
@@ -137,6 +145,7 @@ public class Protagonista {
 		 * @param scelta numero relativo alla scelta del menu a schermo
 		 * @throws InvalidValueForGameMenu lancia un'eccezione se la scelta non è compresa tra 1 e 3*
 		 * @see Protagonista#Menu()
+		 * @see Protagonista#getScenari()
 		 * */
 		
 		public void GameController(int scelta) throws InvalidValueForGameMenu {
@@ -155,10 +164,9 @@ public class Protagonista {
 			return titolo;
 		}
 		
-		/** setta il titolo del gioco 
-		 * @param titolo titolo del gioco*/
-		private void setTitolo(String titolo) {
-			this.titolo = titolo;
+		/** setta il titolo del gioco */
+		private void setTitolo() {
+			this.titolo = "La leggenda della voragine";
 		}
 		/** ritorna il livello attuale del gioco 
 		 * @return livello attuale del gioco*/
@@ -166,7 +174,22 @@ public class Protagonista {
 			return numLivelloAttuale;
 		}
 		
-		
+		/** ritorna la trama del gioco
+		 * @return trama del gioco */
+		private String getTrama() {
+			return trama;
+		}
+		/** setta la trama del gioco */
+		private void setTrama() {
+			this.trama = "In un mondo dove il comando è in mano a figure dall’identità ignota, gran parte della popolazione soffre la fame. Le uniche famiglie ad andare avanti sono coloro\n"
+					+ "che si affidano ai pochi ricchi ed essi, bramosi di ulteriore potere e ricchezza, ne sfruttano i primogeniti che arrivano a compiere i diciotto anni per seguire una leggenda\n"
+					+ "e crearne un intrattenimento a loro insaputa.\n" + 
+					"Ad iniziare questa storia è Nivek, primogenito di una delle famiglie a cui è toccata la peggior sorte, e che si ritroverà a dover affrontare creature mai \n"
+					+ "viste prima d’ora insieme ad altri nove ragazzi presi in custodia dal ricco Nilon Auschvagen.\n" + 
+					"La leggenda narra che, in fondo ad una voragine posta al centro del mondo con molteplici entrate, si trovi un oggetto sconosciuto in grado di esaudire ogni desiderio.\n"
+					+ "La leggenda si rivelerà vera o una speranza creata dai ricchi per poter usufruire al meglio della povera gente?\n" + 
+					"";
+		}
 		
 		
 	

@@ -13,6 +13,7 @@ public class App
         Scanner scanner =new Scanner(System.in);
         String scelta="0";
         do {
+       
         protagonista.Menu();
         do {
         scelta=scanner.nextLine();
