@@ -159,7 +159,7 @@ public class Protagonista {
 		/**funzione che controlla se la scelta relativa allo scenario è corretta e stampa una risposta relativa scelta del giocatore
 		 * @param scelta numero relativo alla scelta dello scenario a schermo
 		 * @throws InvalidValueForGameScene lancia un eccezione se la scelta non è compresa tra 1 e 4
-		 * @see Protagonista#getAnswer(scelta)*/
+		 * @see Protagonista#getAnswer(int)*/
 		public void isCorrectChoise(int scelta) throws InvalidValueForGameScene {
 	        if (scelta==this.getCorrectChoise()) {
 	        	System.out.println(this.getAnswer(scelta));
