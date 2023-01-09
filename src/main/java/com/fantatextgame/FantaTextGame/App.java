@@ -9,19 +9,10 @@ public class App
     {
        
         
-        Protagonista protagonista = new Protagonista();
+        Protagonista protagonista = null;
         Scanner scanner =new Scanner(System.in);
         String scelta="0";
-        
-        do {
-            try {
-            scelta=scanner.nextLine();
-            } catch (Exception e) {
-            	
-                System.out.println("errore");
-
-            }
-            }while (Integer.parseInt(scelta)<3);
+ 
 
                 do {
                 System.out.println("scegli il tuo eroe \n1)Jedi\n2)Mago\n3)Hobbit");
