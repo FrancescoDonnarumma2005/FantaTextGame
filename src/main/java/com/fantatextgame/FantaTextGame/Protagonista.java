@@ -67,7 +67,7 @@ public abstract class Protagonista {
 			if(numLivelloAttuale==0 || isRestarted) {
 				System.out.println(this.getTrama());
 			}
-			System.out.println("Stai giocando a " + this.getTitolo() +" livello " + numLivelloAttuale+1 + " digitare il numero corrispondente all’azione da fare.\n"+ 
+			System.out.println("Stai giocando a " + this.getTitolo() +" livello " + (numLivelloAttuale+1) + " digitare il numero corrispondente all’azione da fare.\n"+ 
 					"1) Gioca\n" + 
 					"2) Ritirati\n" + 
 					"3) Riavvia da capo");
