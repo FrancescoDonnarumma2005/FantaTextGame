@@ -12,6 +12,30 @@ public class App
         Protagonista protagonista = new Protagonista();
         Scanner scanner =new Scanner(System.in);
         String scelta="0";
+        
+        do {
+            try {
+            scelta=scanner.nextLine();
+            } catch (Exception e) {
+            	
+                System.out.println("errore");
+
+            }
+            }while (Integer.parseInt(scelta)<3);
+
+                do {
+                System.out.println("scegli il tuo eroe \n1)Jedi\n2)Mago\n3)Hobbit");
+                scelta=scanner.nextLine();
+                if (Integer.parseInt(scelta)==1) {
+                    protagonista= new Jedi();
+                }
+                else if (Integer.parseInt(scelta)==2) {
+                    protagonista=new Mago();
+                }
+                else if (Integer.parseInt(scelta)==3) {
+                    protagonista=new Hobbit();
+                    }
+                } while(!scelta.equals("1") && !scelta.equals("2") && !scelta.equals("3"));
         do {
        
         protagonista.Menu();
@@ -19,7 +43,22 @@ public class App
         scelta=scanner.nextLine();
         } while (!scelta.equals("1") && !scelta.equals("2") && !scelta.equals("3"));
         protagonista.GameController(Integer.parseInt(scelta));
+        
         if(protagonista.isRestarted()) {
+            do {
+                System.out.println("scegli il tuo eroe \n1)Jedi\n2)Mago\n3)Hobbit");
+                scelta=scanner.nextLine();
+                if (Integer.parseInt(scelta)==1) {
+                    protagonista= new Jedi();
+                }
+                else if (Integer.parseInt(scelta)==2) {
+                    protagonista=new Mago();
+                }
+                else if (Integer.parseInt(scelta)==3) {
+                    protagonista=new Hobbit();
+                    }
+                } while(!scelta.equals("1") && !scelta.equals("2") && !scelta.equals("3"));
+
             continue;
         }
         do {
