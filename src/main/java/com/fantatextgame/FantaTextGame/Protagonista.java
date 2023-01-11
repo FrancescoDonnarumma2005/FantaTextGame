@@ -4,14 +4,14 @@ import java.io.FileReader;
 import java.util.Scanner;
 
 /** 
- * Classe che gestisce la lore del gioco e le scelte prese riguardanti il gioco stesso 
+ * Classe che gestisce la lore dei vari giochi: {@link Jedi Jedi}, {@link Mago Mago} e {@link Hobbit Hobbit}
  * 
  *  @author Francesco Donnarumma
  * 	@author Vittoria Simonetti
  *	@author Giuseppe Liberato Serra
  *	@author Giuseppe Borzachiello
  *	@author Kevin Gargiulo
- *	@version 1.9.8
+ *	@version 2.0.0
 **/
 public abstract class Protagonista {
 	
@@ -57,7 +57,7 @@ public abstract class Protagonista {
 		
 		
 		/**setta il numero corrispondente alla scelta giusta */
-				protected abstract void setCorrectChoise();
+		protected abstract void setCorrectChoise();
 				
 		/**funzione che stampa il menu e la trama se il livello è 0 o se il gioco è stato restartato 
 		 * @see Protagonista#getTrama()
@@ -90,7 +90,7 @@ public abstract class Protagonista {
 		/**funzione che controlla se la scelta relativa allo scenario è corretta e stampa una risposta relativa scelta del giocatore
 		 * @param scelta numero relativo alla scelta dello scenario a schermo
 		 * @throws InvalidValueForGameScene lancia un eccezione se la scelta non è compresa tra 1 e 4
-		 * @see Protagonista#getAnswer(scelta)*/
+		 * @see Protagonista#getAnswer(int)*/
 		public void isCorrectChoise(int scelta) throws InvalidValueForGameScene {
 	        if (scelta==this.getCorrectChoise()) {
 	        	System.out.println(this.getAnswer(scelta));
@@ -136,7 +136,7 @@ public abstract class Protagonista {
 		protected abstract void setTitolo();
 		/** ritorna il livello attuale del gioco 
 		 * @return livello attuale del gioco*/
-		protected int getNumLivelloAttuale() {
+		public int getNumLivelloAttuale() {
 			return numLivelloAttuale;
 		}
 		
