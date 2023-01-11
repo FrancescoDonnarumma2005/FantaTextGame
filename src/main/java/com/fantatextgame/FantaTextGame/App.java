@@ -13,9 +13,9 @@ public class App
         Scanner scanner =new Scanner(System.in);
         String scelta="0";
  
-
+        //usando il polimorfismo e un do while che si ripeterà finchè la scelta non sarà 1,2 o 3, va ad istanziare la classe della storia scelta
                 do {
-                System.out.println("scegli il tuo eroe \n1)Jedi\n2)Mago\n3)Hobbit");
+                System.out.println("scegli il tuo eroe \n1)Jedi\n2)Mago\n3)Hobbit"); 
                 scelta=scanner.nextLine();
                 if (Integer.parseInt(scelta)==1) {
                     protagonista= new Jedi();
