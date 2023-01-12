@@ -1,0 +1,37 @@
+{"scenario0":"Sei partito con il tuo zaino sulle spalle pieno di provviste e di oggetti che potrebbero rivelarsi utili e la tua spada. \nNel cammino verso la montagna solitaria ti ritrovi in una caverna di Goblin, ormai perso. Cosa fai per uscire?\n\n1. Combatti i goblin con la tua spada. \n2. Fuggi dalla caverna correndo verso l'uscita. \n3. Cerchi un'altra via d'uscita, come un passaggio segreto o una porta nascosta\n4. Ti nascondi e aspetti che i goblin se ne vadano\n",
+"scenario1":"Dopo essersi liberato dalla caverna di Goblin, ormai in piena notte, Manfrad si ritrova nella pericolosa Foresta del Mirkwood, infestata da orchi,\nlupi mannari ed altre malvagie creature. Cosa fai?\n1. Decidi di chiedere aiuto agli Elfi che si trovano nella foresta per guidarti\n2. Attraversi la foresta di notte, quando i pericoli sono meno visibili.\n3. Costruisci un rifugio per aspettare che sorga il sole.\n4. Segui un sentiero che sembra portare fuori dalla foresta.\n",
+"scenario2":"Tu e gli Elfi che avevano deciso di accompagnarti nella tua impresa, arrivate alla Montagna Solitaria, dove dovrai affrontare il pericolo rappresentato \ndallo Smaug, un drago enorme dal color oro rosso che vive lì, perennemente adagiato sulle ricchezze dei nani che un tempo abitavano lì, \normai abbattuti dal drago. Cosa tenti di fare?\n\n1. Ingaggia uno scontro con il drago Smaug e provi ad ucciderlo.\n2. Fuggi dalla montagna.\n3. Ti nascondi e aspetti che Smaug se ne vada.\n4. Cerchi un modo per addormentare o distrarre Smaug per poter passare inosservati.\n",
+"scenario3":"Dopo aver sconfitto il drago Smaug e recuperato parte del tesoro della Montagna Solitaria, ti prepari per il viaggio di ritorno a casa e a salutare gli \nelfi ma ben presto si insinua nella tua testa un problema per il viaggio.Cosa fai?\n1. Andate in un paese vicino e chiedi l'aiuto di una guida esperta per tornare.\n2. Partite di notte, per nascondervi dai pericoli e dalle creature notturne.\n3. Viaggiate da soli, senza il supporto di nessun altro.\n4. Partite per il ritorno di giorno, per avere più luce e maggiori possibilità di orientarsi.\n",
+"scenario4":"Durante il loro viaggio, Manfrad e la guida stanno tornando alla Contea. Tuttavia, a poca distanza dalla Contea, dei banditi si rivelano,\n minacciando di uccidervi se non gli verrà consegnato il tesoro trovato poco prima sotto il drago. Il capo dei banditi rivela anche di aver ascoltato\nla sua conversazione con la guida, venendo a sapere anche delle monete.\nCosa fai?\nGli consegni il tesoro senza combattere.\nCacci la tua spada dal fodero per combatterli\nFai finta di consegnargli il tesoro per poi attaccarli mentre sono distratti\nDecidi di correre il più veloce possibile per arrivare alla contea e uscirne indenni\n",
+"correctChoise0":"3",
+"correctChoise1":"1",
+"correctChoise2":"4",
+"correctChoise3":"1",
+"correctChoise4":"3",
+"answer00":"Combatti i goblin, ma sono troppi e riescono a ucciderti.",
+"answer01":"Fuggi, ma inciampi su una pietra e cadi. I goblin ti raggiungono e ti uccidono",
+"answer02":"Trovi un passaggio segreto che ti porta fuori dalla caverna e ti permette di scappare indenne dai goblin.",
+"answer03":"Ti nascondi ma i goblin ti trovano e ti uccidono\n",
+"answer10":"Trovi gli Elfi e chiedi il loro aiuto. Loro, ormai abitanti della foresta da lungo tempo, ti accompagnano fuori dalla foresta senza problemi.",
+"answer11":"Segui il sentiero, ma ad un certo punto si interrompe e ti perdi. Muori di fame e di stenti.",
+"answer12":"Mentre stai cercando di costruire un rifugio vieni attaccato da insetti velenosi che ti uccidono in pochi secondi. Sei morto!",
+"answer13":"Avanzi nella foresta nel buio della notte, con la luna come unica luce ad illuminare il sentiero. Vieni attaccato da un lupo mannaro e muori.",
+"answer20":"Tenti di sconfiggere Smaug, ma il drago è troppo potente e ti uccide con il suo fiato di fuoco.",
+"answer21":"Tu e gli Elfi tentate di fuggire, ma venite raggiunti e uccisi dal drago Smaug.",
+"answer22":"Vi nascondete, ma il drago Smaug vi trova e vi uccide",
+"answer23":"La tua idea ha funzionato, infatti usando un sonnifero che avevi nel tuo zaino, che solo gli hobbit sono in grado di creare,\nti avvicini a lui facendolo ruggire in segno di avvertimento. Approfitti quindi della sua bocca spalancata per lanciargli con tutta la tua forza\nl'ampolla contenente il sonnifero. Smaug si addormenta in pochi secondi e tu e i tuoi compagni Elfi riuscite a passare incolumi e a uscire dalla montagna",
+"answer30":"Riesci a trovare una guida esperta che ti aiuta a navigare attraverso le strade della Terra di Mezzo.",
+"answer31":"Tenti di viaggiare di notte, ma sul cammino incontri un precipizio. Sei morto!",
+"answer32":"Viaggi da solo, ma ti perdi e, dopo aver esaurito le tue provviste, muori di fame e di stenti.",
+"answer33":"Tenti di viaggiare di giorno, ma vieni attaccato da un orco e vieni ucciso.",
+"answer40":"Dopo aver consegnato il tesoro proseguiti, siete quasi arrivati fino a che i banditi, spietatamente, decidono di uccidervi.",
+"answer41":"I banditi sono in troppi e dopo averne sconfitti due vieni sopraffatto e ucciso.\n",
+"answer42":"Mentre i banditi sono troppo impegnati a festeggiare per il tesoro e a contare l'ammontare del bottino, decidi di attaccarli. \nRiesci a sopravvivere senza molti danni e a mettere in salvo anche la guida. Arrivi alla Contea dopo poco e\nfai una relazione di tutto ciò che è successo. Consegni il tesoro con la relazione alla gilda che si occupa di assegnare gli incarichi in\nnome del conte e vieni premiato con un riconoscimento internazionale per aver intrapreso la più impavida e rischiosa delle avventure salvando\nla Contea e le regioni vicine.\n",
+"answer43":" I banditi sono di più e più veloci, vieni raggiunto e ucciso.",
+"trama":"La Contea è una regione molto famosa del mondo Arda, governata da un Conte scelto dal popolo degli Hobbit talvolta il conte assegna agli abitanti varie \nmansioni, dalle più semplici alle più mortali. Gli hobbit sono uomini con una corporatura molto minuta, quasi bambinesca, dotati di grandi piedi pelosi \ne resistenti e non indossano mai calzature a causa della loro spessa e coriacea pelle.nIl nostro protagonista è un hobbit di nome Manfrad, appassionato di avventure e pericoli ed anche uno degli abitanti più affidabili della Contea per \nla sua astuzia che in passato gli ha permesso di sopravvivere a diverse guerre. Un giorno a Manfred verrà affidato un nuovo incarico; \nattraversare le terre più ostili della Terra di Mezzo e affrontare creature pericolose per raggiungere la Montagna Solitaria, abitata dal terribile \ndrago Smaug che potrebbe rivelarsi un problema per i paesi vicini e anche per la Contea stessa.\nDurante il viaggio, Manfrad dovrà prendere numerose decisioni difficili che potrebbero fare la differenza tra la vita e la morte. \nRiuscirà a tornare a casa sano e salvo, o perirà nel tentativo?",
+"titolo":"L'incarico di Manfred"
+
+
+
+
+}
