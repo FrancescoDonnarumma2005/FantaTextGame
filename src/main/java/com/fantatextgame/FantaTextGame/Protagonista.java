@@ -1,7 +1,13 @@
 package com.fantatextgame.FantaTextGame;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 /** 
  * Classe che gestisce la lore dei vari giochi: {@link Jedi Jedi}, {@link Mago Mago} e {@link Hobbit Hobbit}
@@ -13,7 +19,7 @@ import java.util.Scanner;
  *	@author Kevin Gargiulo
  *	@version 2.0.0
 **/
-public abstract class Protagonista {
+public class Protagonista {
 	
 		
 		protected boolean isRestarted=false; //attributo che potrebbe trovare la propria utilità nel main per controllare se l'utente sceglie di restartare
@@ -23,41 +29,50 @@ public abstract class Protagonista {
 		protected int[] correctChoises=new int[5]; //array di stringhe che contiene il numero corrispondente alla scelta corretta
 		protected String trama;
 		protected String[][] answer=new String[5][4];
+		JSONObject storia=new JSONObject();
 		
 		
 		
-		/**costruttore che lancia i metodi 
-		 *{@link Protagonista#setScenari() setScenari()}, {@link Protagonista#setCorrectChoise() setCorrectAnswer()}, {@link Protagonista#setTitolo() setTitolo()}, {@link Protagonista#setTrama() setTrama()}
-		 *e {@link Protagonista#setAnswer() setAnswer()}*/
-		public Protagonista(){
+		/**
+		 * Costruttore che asseconda della storia che l'utente vuole avviare legge da un file json diverso
+		 * @throws ParseException 
+		 * @throws IOException */
+		public Protagonista(int sceltaAvventura) throws IOException, ParseException{
+			JSONParser parser=new JSONParser();
+			FileReader reader=null;
+			if(sceltaAvventura==1) {
+			 reader = new FileReader("src/resources/Jedi.json");
+			}
+			else if(sceltaAvventura==2) {
+				reader = new FileReader("src/resources/Mago.json");
+			}
+			else if(sceltaAvventura==3) {
+				reader = new FileReader("src/resources/Hobbit.json");
+			}
 			
-			this.setScenari();
-			this.setCorrectChoise(); 
-			this.setTitolo();
-			this.setTrama();
-			this.setAnswer();
-			
+	        Object obj = parser.parse(reader);
+	        storia=new JSONObject();
+	        storia= (JSONObject) obj;
 		}
-		/**Setta in un array di stringhe i vari scenari corrispondenti ai vari livelli */
-		protected abstract void setScenari();
+	
 		
-		/**ritorna la stringa dello scenario rispettivo al livello attuale
+		/**ritorna la stringa dello scenario rispettivo al livello attuale leggendo dal file json
 		 *@return la stringa dello scenario rispettivo al livello attuale  */
 	    protected String getScenari() {
-	       return scenari[numLivelloAttuale-1]; 
+	       return (String)storia.get("scenario"+(numLivelloAttuale-1)); 
 	    }
 		
 		
-		/** un get che ritorna a seconda del livello attuale la risposta corretta corrispondente a quel livello 
+		/** un get che ritorna a seconda del livello attuale la risposta corretta corrispondente a quel livello leggendo dal file json
 		 * @return la risposta corretta rispettiva allo scenario */
 		
 		protected int getCorrectChoise() {
-			return correctChoises[numLivelloAttuale-1];
+			 Integer t=Integer.parseInt((String)storia.get("correctChoise"+(numLivelloAttuale-1)));
+			 int t1=t;
+			 return t1;
 		}
 		
 		
-		/**setta il numero corrispondente alla scelta giusta */
-		protected abstract void setCorrectChoise();
 				
 		/**funzione che stampa il menu e la trama se il livello è 0 o se il gioco è stato restartato 
 		 * @see Protagonista#getTrama()
@@ -77,13 +92,12 @@ public abstract class Protagonista {
 			return isRestarted;
 		}
 		
-		/**setta la risposta relativa alle scelte prese dal giocatore riguardanti i vari scenari*/
-		protected abstract void setAnswer();
+		
 		/**ritorna la stringa della risposta rispettiva alla scelta e al livello attuale
 		 * @param scelta numero relativo alla scelta dello scenario a schermo
 		 * @return la stringa della risposta rispettiva alla scelta e al livello attuale*/
 		protected String getAnswer(int scelta) {
-			return answer[numLivelloAttuale-1][scelta-1];
+			return (String)storia.get("answer"+(numLivelloAttuale-1)+(scelta-1));
 		}
 		
 		
@@ -126,27 +140,23 @@ public abstract class Protagonista {
 	   
 	     }
 	   }
-		/** ritorna il titolo del gioco 
+		/** ritorna il titolo del gioco leggendo da file json
 		 * @return titolo del gioco*/
 		protected String getTitolo() {
-			return titolo;
+			return (String)storia.get("titolo");
 		}
 		
-		/** setta il titolo del gioco */
-		protected abstract void setTitolo();
-		/** ritorna il livello attuale del gioco 
+		/** ritorna il livello attuale del gioco leggendo da file json
 		 * @return livello attuale del gioco*/
 		public int getNumLivelloAttuale() {
 			return numLivelloAttuale;
 		}
 		
-		/** ritorna la trama del gioco
+		/** ritorna la trama del gioco leggendo da file json
 		 * @return trama del gioco */
 		protected String getTrama() {
-			return trama;
+			return (String)storia.get("trama");
 		}
-		/** setta la trama del gioco */
-		protected abstract void setTrama();
 		
 	
 

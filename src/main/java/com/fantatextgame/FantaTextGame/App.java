@@ -9,7 +9,7 @@ public class App
     {
        
         
-        Protagonista protagonista = null;
+      
         Scanner scanner =new Scanner(System.in);
         String scelta="0";
  
@@ -17,16 +17,9 @@ public class App
                 do {
                 System.out.println("scegli il tuo eroe \n1)Jedi\n2)Mago\n3)Hobbit"); 
                 scelta=scanner.nextLine();
-                if (Integer.parseInt(scelta)==1) {
-                    protagonista= new Jedi();
-                }
-                else if (Integer.parseInt(scelta)==2) {
-                    protagonista=new Mago();
-                }
-                else if (Integer.parseInt(scelta)==3) {
-                    protagonista=new Hobbit();
-                    }
+               
                 } while(!scelta.equals("1") && !scelta.equals("2") && !scelta.equals("3"));
+                Protagonista protagonista=new Protagonista(Integer.parseInt(scelta));
         do {
        
         protagonista.Menu();
@@ -39,17 +32,8 @@ public class App
             do {
                 System.out.println("scegli il tuo eroe \n1)Jedi\n2)Mago\n3)Hobbit");
                 scelta=scanner.nextLine();
-                if (Integer.parseInt(scelta)==1) {
-                    protagonista= new Jedi();
-                }
-                else if (Integer.parseInt(scelta)==2) {
-                    protagonista=new Mago();
-                }
-                else if (Integer.parseInt(scelta)==3) {
-                    protagonista=new Hobbit();
-                    }
                 } while(!scelta.equals("1") && !scelta.equals("2") && !scelta.equals("3"));
-
+            protagonista=new Protagonista(Integer.parseInt(scelta));
             continue;
         }
         do {
