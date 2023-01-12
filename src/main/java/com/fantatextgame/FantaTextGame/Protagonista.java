@@ -10,7 +10,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 /** 
- * Classe che gestisce la lore dei vari giochi: {@link Jedi Jedi}, {@link Mago Mago} e {@link Hobbit Hobbit}
+ * Classe che gestisce la lore dei vari giochi utillizzando 3 diversi file JSON
  * 
  *  @author Francesco Donnarumma
  * 	@author Vittoria Simonetti
@@ -24,19 +24,15 @@ public class Protagonista {
 		
 		protected boolean isRestarted=false; //attributo che potrebbe trovare la propria utilità nel main per controllare se l'utente sceglie di restartare
 		protected int numLivelloAttuale=0;
-		protected String titolo;
-		protected String[] scenari=new String[5]; //Array di stringhe che contiene le descrizioni con le scelte dei vari scenari 
-		protected int[] correctChoises=new int[5]; //array di stringhe che contiene il numero corrispondente alla scelta corretta
-		protected String trama;
-		protected String[][] answer=new String[5][4];
 		JSONObject storia=new JSONObject();
 		
 		
 		
 		/**
 		 * Costruttore che asseconda della storia che l'utente vuole avviare legge da un file json diverso
-		 * @throws ParseException 
-		 * @throws IOException */
+		 * @throws ParseException exception del JSONPARSER se non può convertire
+		 * @throws IOException exception del FileReader se non trova il file
+		 * @param sceltaAvventura scelta dell'avventura che si vuole giocare tra le disponibili*/
 		public Protagonista(int sceltaAvventura) throws IOException, ParseException{
 			JSONParser parser=new JSONParser();
 			FileReader reader=null;
