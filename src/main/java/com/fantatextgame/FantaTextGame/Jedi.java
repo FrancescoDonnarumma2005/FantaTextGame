@@ -25,7 +25,7 @@ public class Jedi extends Protagonista {
 	
 	@Override
 	protected void setScenari() {
-		// TODO Auto-generated method stub
+		
 		scenari[0]="Ti trovi sul pianeta KeltHat, il primo dei 3 pianeti più pericolosi dell’universo, questo pianeta ospita tutti i mostri più strani \n"
 				+ "e potenti di tutto il cosmo.\n "
 				+ "Davanti a te è pieno di ingressi, ad ognuno corrisponde una battaglia contro un mostro specifico,\n"
@@ -88,7 +88,7 @@ public class Jedi extends Protagonista {
 	
 	@Override
 	protected void setCorrectChoise() {
-		// TODO Auto-generated method stub
+		
 		correctChoises[0]=4;
         correctChoises[1]=1;
         correctChoises[2]=2;
@@ -99,7 +99,7 @@ public class Jedi extends Protagonista {
 	
 	@Override
 	protected void setAnswer() {
-		// TODO Auto-generated method stub
+		
 		answer[0][0]="Vi siete ritrovati davanti un drago krayt ma le vostre spade non bastano a ucciderne uno. Sei morta!";
 		answer[0][1]="Appena avete messo piede nella grotta un enorme Scavasabbia emerge con rapidità e forza inaudita dalle dune e\n"
 				+ "ha inghiottito te e i tuoi compagni uccidendovi.";
@@ -126,7 +126,7 @@ public class Jedi extends Protagonista {
 				+ "sono cresciute delle lunghe spine che vi hanno trafitto e ucciso.";
 		answer[2][3]="Hai sbagliato il lancio colpendo una creatura originaria del posto che si è sentita immediatamente minacciata e con \n"
 				+ "un ruggito ha fatto smuovere tutta la natura attorno a voi facendovi attaccare e uccidere da essa.";
-		answer[3][0]="Appena hai dato le spalle al Nexu questo ne ha approfittato per attaccarti e ucciderti.\r\n" + 
+		answer[3][0]="Appena hai dato le spalle al Nexu questo ne ha approfittato per attaccarti e ucciderti.\n" + 
 				"";
 		answer[3][1]="Riuscita ad uscire dalla grotta sana e salva e, appena entrata nella grotta del tuo compagno, una frana ha bloccato l’entrata,\n"
 				+ " distraendovi entrambi dall’obiettivo principale che, appena ha avuto l’occasione vi ha ucciso entrambi.";
@@ -136,18 +136,18 @@ public class Jedi extends Protagonista {
 		answer[4][1]="Il mostro è troppo agile per un’impresa simile e ti ha ucciso.";
 		answer[4][2]="Il mostro è troppo agile e forte per un’impresa simile e ti ha ucciso.";
 		answer[4][3]="Mentre l’attenzione del Nexu era rivolta su di te hai richiamato la spada facendola conficcare nella testa del Nexu uccidendolo.\n"
-				+ " Sei riuscita a passare anche quest’ultima prova prima e meglio di chiunque altro ed è qui che sul pianeta scendono i maestri jedi \n"
+				+ "Sei riuscita a passare anche quest’ultima prova prima e meglio di chiunque altro ed è qui che sul pianeta scendono i maestri jedi \n"
 				+ "ad aiutare gli altri compagni ancora alle prese con la battaglia. Alcuni maestri si avvicinano per congratularsi con te che sei riuscita \n"
-				+ "nella pazza impresa, \n"
+				+ "nella pazza impresa,\n"
 				+ "spiegandoti anche che fingere che fosse un’impresa mortale anziché completamente monitorata era l’unica scelta per allenare velocemente \n"
-				+ "da 0 nuove reclute \n"
+				+ "da 0 nuove reclute\n"
 				+ "e scoprire una persona in grado di guidare tutti gli altri maestri e jedi di rango più basso nell’imminente ingresso alla guerra.";
 	}
 
 	
 	@Override
 	protected void setTitolo() {
-		// TODO Auto-generated method stub
+		
 		this.titolo="Pain of the Three Path";
 		
 	}
@@ -155,7 +155,7 @@ public class Jedi extends Protagonista {
 	
 	@Override
 	protected void setTrama() {
-		// TODO Auto-generated method stub
+		
 		this.trama="Ci troviamo nel 17ABY con una situazione interstellare disastrosa per le continue guerre, \n"
 				+ "l’Ordine dei jedi, ormai privo di un Gran Maestro, è in cerca di un sostituto il prima possibile,\n"
 				+ " che possa essere in grado di guidare tutti gli altri jedi alla vittoria.\n"
